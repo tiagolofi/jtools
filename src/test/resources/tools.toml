@@ -1,0 +1,4 @@
+
+[onde-estou]
+desc = "Onde eu estou?"
+command = ["pwd"]
