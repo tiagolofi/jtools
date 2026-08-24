@@ -15,9 +15,9 @@ public class ToolsRepositoryTest {
     public void testGetTool() {
         Path file = Path.of("src/test/resources/tools.toml");
 
-        ToolsRepository toolsRepository = new ToolsRepository(file);
+        JToolsRepository toolsRepository = new JToolsRepository(file);
 
-        Tool tool = toolsRepository.getTool("onde-estou");
+        JTool tool = toolsRepository.getTool("onde-estou");
         Assertions.assertNotNull(tool);
     }
         
@@ -25,9 +25,9 @@ public class ToolsRepositoryTest {
     public void testGetAllTools() {
         Path file = Path.of("src/test/resources/tools.toml");
 
-        ToolsRepository toolsRepository = new ToolsRepository(file);
+        JToolsRepository toolsRepository = new JToolsRepository(file);
 
-        List<Tool> tools = toolsRepository.getAllTools();
+        List<JTool> tools = toolsRepository.getAllTools();
         Assertions.assertFalse(tools.isEmpty());
     }
 
@@ -35,9 +35,9 @@ public class ToolsRepositoryTest {
     public void testGetToolNotFound() {
         Path file = Path.of("src/test/resources/tools.toml");
 
-        ToolsRepository toolsRepository = new ToolsRepository(file);
+        JToolsRepository toolsRepository = new JToolsRepository(file);
 
-        Tool tool = toolsRepository.getTool("non-existent-tool");
+        JTool tool = toolsRepository.getTool("non-existent-tool");
         Assertions.assertNull(tool);
     }
 
@@ -48,7 +48,7 @@ public class ToolsRepositoryTest {
         RuntimeException exception =
             assertThrows(
                 RuntimeException.class,
-                () -> new ToolsRepository(file)
+                () -> new JToolsRepository(file)
             );
 
         assertTrue(

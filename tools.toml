@@ -1,8 +1,0 @@
-
-[onde-estou]
-desc = "Onde eu estou?"
-command = ["pwd"]
-
-[listar-processos]
-desc = "Listar processos em andamento"
-command = ["ps"]

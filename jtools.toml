@@ -1,0 +1,8 @@
+
+[pwd]
+desc = "Diretório atual"
+command = ["pwd"]
+
+[ps]
+desc = "Listar processos em andamento"
+command = ["ps"]
