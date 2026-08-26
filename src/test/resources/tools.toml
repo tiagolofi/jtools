@@ -1,4 +1,5 @@
 
-[onde-estou]
-desc = "Onde eu estou?"
+[pwd]
+desc = "Diretório atual"
 command = ["pwd"]
+pipeline = []

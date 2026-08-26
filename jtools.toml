@@ -1,8 +1,15 @@
 
+[pom-exists]
+desc = "Verifica se o pom.xml existe"
+command = []
+pipeline = [["ls"], ["grep", "pom"]]
+
 [pwd]
 desc = "Diretório atual"
 command = ["pwd"]
+pipeline = []
 
 [ps]
 desc = "Listar processos em andamento"
 command = ["ps"]
+pipeline = []
